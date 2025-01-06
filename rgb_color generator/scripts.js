@@ -19,15 +19,21 @@ function updateColor() {
     const bluevalue = blue.value;
     const greenvalue = green.value;
 
-    greenValue.innerText = greenvalue;
-    redValue.innerText = redvalue;
-    blueValue.innerText = bluevalue
+    greenValue.textContent = greenvalue;
+    redValue.textContent = redvalue;
+    blueValue.textContent = bluevalue
 
     const rgbcolor = `rgb(${redvalue},${greenvalue},${bluevalue})`;
     colorBox.style.backgroundColor = rgbcolor;
 
-    inputType.innerText = rgbcolor;
+    inputType.textContent = rgbcolor;
 
 };
 updateColor();
 
+copyButton.addEventListener('click',() => {
+    navigator.clipboard.writeText(inputType.innerText)
+        .then(() => alert('Copied to clipboard: ' + inputType.innerText))
+        .catch((err) => console.error('Failed to copied:', err));
+
+});
