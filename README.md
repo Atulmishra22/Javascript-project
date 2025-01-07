@@ -19,3 +19,5 @@ it has slider for red, green and blue. <br>
 it generates a random rgb colour when you slide on the button. <br>
 it has a button to copy that value so that you can use. <br>
 
+## project 4:
+it is a simple Analog clock webpage. <br>
